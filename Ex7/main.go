@@ -1,18 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var i int
-	k := 1
+	var current_max, prev_max int
+	prev_max = math.MaxInt
 	counter := 0
-	fmt.Scan(&i)
-	for k != 0 {
-		fmt.Scan(&k)
-		if k > i {
+	current_max = 1
+
+	for current_max != 0 {
+		fmt.Scan(&current_max)
+		if current_max > prev_max {
 			counter++
 		}
-		i = k
+		prev_max = current_max
 	}
 
 	fmt.Println(counter)
