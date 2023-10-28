@@ -11,8 +11,12 @@ func main() {
 	counter := 0
 	current_max = 1
 
-	for current_max != 0 {
+	for {
 		fmt.Scan(&current_max)
+
+		if current_max == 0 {
+			break
+		}
 		if current_max > prev_max {
 			counter++
 		}

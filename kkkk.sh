@@ -1,12 +1,9 @@
 #!/bin/bash
 
-for N in {1..10} 
-do 
-    mkdir Ex$N/ 
-    mv $N.go Ex$N/ 
-    cd Ex$N/ 
-    mv $N.go main.go
-    cd .. 
+for N in {12..41}
+do
+    cp -r Ex11/ Ex$N/
+
 done
 
 echo "Done!"

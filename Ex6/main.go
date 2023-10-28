@@ -2,22 +2,22 @@ package main
 
 import (
 	"fmt"
-	// "math"
 )
 
 func main() {
 	var i, k int
-	counter := 0
+	counter := 1
 	fmt.Scan(&i)
 
 	for {
 		fmt.Scan(&k)
 		if k >= i {
 			counter++
-			i = k
-		} else {
+		}
+		if i > k {
 			break
 		}
+		i = k
 	}
 
 	fmt.Println(counter)
