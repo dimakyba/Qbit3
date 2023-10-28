@@ -2,37 +2,24 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
-	var current_max, prev_max int
-	counter := 0
-	maxCounter := 0
+	var n int
+	fmt.Print("Enter the number of lines: ")
+	fmt.Scan(&n)
 
-	prev_max = -1
+	var str string
 
-	for {
-		fmt.Scan(&current_max)
+	fmt.Scan(&str)
 
-		if current_max == 0 {
-			break
+	trimmed := strings.TrimSpace(str)
+	for i := 1; i <= n; i++ {
+		// numbers := input_line()
+		for j := 0; j < len(trimmed); j++ {
+			fmt.Printf("%d ", trimmed[j])
 		}
-
-		if current_max == prev_max {
-			counter++
-		} else {
-			if counter > maxCounter {
-				maxCounter = counter
-			}
-			counter = 1
-		}
-
-		prev_max = current_max
+		fmt.Println()
 	}
-
-	if counter > maxCounter {
-		maxCounter = counter
-	}
-
-	fmt.Println(maxCounter)
 }
