@@ -1,38 +1,40 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
 )
 
+func numbers(s string) []int {
+	var n []int
+	for _, f := range strings.Fields(s) {
+		i, err := strconv.Atoi(f)
+		if err == nil {
+			n = append(n, i)
+		}
+	}
+	return n
+}
+
+func GetInputSlice() []int {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	return numbers(scanner.Text())
+}
+
 func main() {
-	var current_max, prev_max int
+	var n int
+	fmt.Scan(&n)
 	counter := 0
-	maxCounter := 0
-
-	prev_max = -1
-
-	for {
-		fmt.Scan(&current_max)
-
-		if current_max == 0 {
-			break
-		}
-
-		if current_max == prev_max {
+	inputNumbers := GetInputSlice()
+	for i := 1; i <= n; i++ {
+		for j := 0; j < i; j++ {
+			fmt.Printf("%d ", inputNumbers[counter])
 			counter++
-		} else {
-			if counter > maxCounter {
-				maxCounter = counter
-			}
-			counter = 1
 		}
-
-		prev_max = current_max
+		fmt.Println()
 	}
-
-	if counter > maxCounter {
-		maxCounter = counter
-	}
-
-	fmt.Println(maxCounter)
 }

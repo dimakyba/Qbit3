@@ -2,24 +2,23 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	var n int
-	fmt.Print("Enter the number of lines: ")
+	var n, sum, max int
 	fmt.Scan(&n)
 
-	var str string
-
-	fmt.Scan(&str)
-
-	trimmed := strings.TrimSpace(str)
-	for i := 1; i <= n; i++ {
-		// numbers := input_line()
-		for j := 0; j < len(trimmed); j++ {
-			fmt.Printf("%d ", trimmed[j])
+	max = n
+	for n > 1 {
+		if n%2 == 0 {
+			n /= 2
+			sum += n
+		} else {
+			n = 3*n + 1
 		}
-		fmt.Println()
+		if n > max {
+			max = n
+		}
 	}
+	fmt.Printf("%d %d\n", sum, max)
 }

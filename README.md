@@ -3,4 +3,5 @@
 ## TO-DO:
 + ex7 should be rewritten to complete all testcases
 + ~~find out what's wrong with ex6~~
-+ ex11
++ ~~ex11~~
++ ~~ex16~~
