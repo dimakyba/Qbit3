@@ -29,8 +29,17 @@ func main() {
 	inputNumbers := GetInputSlice()
 	hours := inputNumbers[0]
 	minutes := inputNumbers[1]
-	var step int
-	fmt.Scan(&step)
+	total_minutes := hours*60 + minutes
+	var counter int
+	fmt.Scan(&counter)
+	for i := 1; i <= counter; i++ {
+		if hours%24 != 0 {
+			hours %= 24
+		}
+		fmt.Printf("%02d:%02d\n", hours, minutes)
+		total_minutes += 5
+		hours = total_minutes / 60
+		minutes = total_minutes % 60
 
-	fmt.Printf("\n %d:%d %d \n", hours, minutes, step)
+	}
 }
