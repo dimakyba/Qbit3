@@ -5,34 +5,20 @@ import (
 )
 
 func main() {
-	var current_max, prev_max int
-	counter := 0
-	maxCounter := 0
+	var n int
+	fmt.Scan(&n)
 
-	prev_max = -1
+	count := 0
 
-	for {
-		fmt.Scan(&current_max)
-
-		if current_max == 0 {
-			break
-		}
-
-		if current_max == prev_max {
-			counter++
-		} else {
-			if counter > maxCounter {
-				maxCounter = counter
+	for i := 1; count < n; i++ {
+		for j := 1; j <= i; j++ {
+			if count < n {
+				fmt.Printf("%d ", i)
+				count++
+			} else {
+				break
 			}
-			counter = 1
 		}
-
-		prev_max = current_max
 	}
-
-	if counter > maxCounter {
-		maxCounter = counter
-	}
-
-	fmt.Println(maxCounter)
+	fmt.Println()
 }
