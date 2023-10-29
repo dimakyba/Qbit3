@@ -1,38 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var current_max, prev_max int
+	var n int
+	fmt.Scan(&n)
 	counter := 0
-	maxCounter := 0
-
-	prev_max = -1
-
-	for {
-		fmt.Scan(&current_max)
-
-		if current_max == 0 {
-			break
-		}
-
-		if current_max == prev_max {
-			counter++
-		} else {
-			if counter > maxCounter {
-				maxCounter = counter
-			}
-			counter = 1
-		}
-
-		prev_max = current_max
+	for n != 0 {
+		counter++
+		fmt.Scan(&n)
 	}
-
-	if counter > maxCounter {
-		maxCounter = counter
-	}
-
-	fmt.Println(maxCounter)
+	fmt.Println(counter)
 }
