@@ -1,38 +1,36 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
+	"strings"
 )
 
+func numbers(s string) []int {
+	var n []int
+	for _, f := range strings.Fields(s) {
+		i, err := strconv.Atoi(f)
+		if err == nil {
+			n = append(n, i)
+		}
+	}
+	return n
+}
+
+func GetInputSlice() []int {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	return numbers(scanner.Text())
+}
+
 func main() {
-	var current_max, prev_max int
-	counter := 0
-	maxCounter := 0
+	inputNumbers := GetInputSlice()
+	hours := inputNumbers[0]
+	minutes := inputNumbers[1]
+	var step int
+	fmt.Scan(&step)
 
-	prev_max = -1
-
-	for {
-		fmt.Scan(&current_max)
-
-		if current_max == 0 {
-			break
-		}
-
-		if current_max == prev_max {
-			counter++
-		} else {
-			if counter > maxCounter {
-				maxCounter = counter
-			}
-			counter = 1
-		}
-
-		prev_max = current_max
-	}
-
-	if counter > maxCounter {
-		maxCounter = counter
-	}
-
-	fmt.Println(maxCounter)
+	fmt.Printf("\n %d:%d %d \n", hours, minutes, step)
 }
