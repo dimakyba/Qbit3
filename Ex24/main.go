@@ -33,10 +33,15 @@ func main() {
 	var counter int
 	fmt.Scan(&counter)
 	for i := 1; i <= counter; i++ {
-		if hours%24 != 0 {
+		if hours%24 != 0 || hours >= 24 {
 			hours %= 24
 		}
-		fmt.Printf("%02d:%02d\n", hours, minutes)
+		if i == counter {
+			fmt.Printf("%02d:%02d", hours, minutes)
+		} else {
+			fmt.Printf("%02d:%02d\n", hours, minutes)
+		}
+
 		total_minutes += 5
 		hours = total_minutes / 60
 		minutes = total_minutes % 60
