@@ -1,7 +1,12 @@
 # the solutions for the qbit exercises 3rd block. both C# and Go ^-^
 
 ## TO-DO:
-+ ex7 should be rewritten to complete all testcases
++ ~~ex7 should be rewritten to complete all testcases~~
 + ~~find out what's wrong with ex6~~
 + ~~ex11~~
 + ~~ex16~~
++ tennis
++ bank
++ GNCHE-1
++ masha and alarms
++ should i change the structure??

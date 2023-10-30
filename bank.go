@@ -28,14 +28,12 @@ func GetInputSlice() []int {
 
 func main() {
 	inputNumbers := GetInputSlice()
-	var n, p, m, t float64
+	var n, p, m, i float64
 	n = float64(inputNumbers[0])
-	p = float64(inputNumbers[1]) / 100.0 // Convert the interest rate to a decimal fraction
+	p = float64(inputNumbers[1]) / 100.0
 	m = float64(inputNumbers[2])
-	t = 1
 
-	for n*math.Pow(1+p, t) <= m {
-		t++
+	for i = 1; n*math.Pow(1+p, float64(i)) <= m; i++ {
 	}
-	fmt.Println(t)
+	fmt.Println(i)
 }
