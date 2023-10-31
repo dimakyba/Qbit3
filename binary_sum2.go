@@ -8,8 +8,10 @@ func main() {
 	fmt.Scan(&n)
 
 	for n > 0 {
-		sum += n & 1
-		n >>= 1
+		if n%2 != 0 {
+			sum++
+		}
+		n /= 2
 	}
 	fmt.Println(sum)
 }

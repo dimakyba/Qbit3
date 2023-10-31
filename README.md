@@ -5,8 +5,11 @@
 + ~~find out what's wrong with ex6~~
 + ~~ex11~~
 + ~~ex16~~
-+ tennis
++ tennis (18 -> 67.5)
 + bank
 + GNCHE-1
 + masha and alarms
 + should i change the structure??
++ ramka using arithmetic
++ fracs_sum
++ ~~remake binary_sum~~
