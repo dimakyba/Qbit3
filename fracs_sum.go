@@ -8,6 +8,7 @@ func main() {
 
 	n, m := uint64(1), uint64(1)
 	nSum, mSum := 0.0, 0.0
+	const max int = 248397
 
 	for nSum < x {
 		nSum += 1.0 / float64(n)

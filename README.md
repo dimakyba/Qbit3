@@ -8,7 +8,7 @@
 + ~~tennis (18 -> 67.5)~~ thx andrew
 + bank
 + GNCHE-1
-+ masha and alarms
++ ~~masha and alarms~~ YESSSSSSSSSSSSSSSSSS
 + should i change the structure??
 + ramka using arithmetic
 + fracs_sum
