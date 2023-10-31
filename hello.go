@@ -8,5 +8,5 @@ func main() {
 	for i := 0; i < n; i++ {
 		fmt.Println("Hello!")
 	}
-	fmt.Println(45 % 10)
+
 }
