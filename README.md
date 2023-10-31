@@ -13,3 +13,4 @@
 + ramka using arithmetic
 + fracs_sum
 + ~~remake binary_sum~~
++ why candies1 doesnt work and second works perfectly??????//
