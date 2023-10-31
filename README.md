@@ -5,7 +5,7 @@
 + ~~find out what's wrong with ex6~~
 + ~~ex11~~
 + ~~ex16~~
-+ tennis (18 -> 67.5)
++ ~~tennis (18 -> 67.5)~~ thx andrew
 + bank
 + GNCHE-1
 + masha and alarms

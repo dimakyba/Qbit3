@@ -1,8 +1,10 @@
-// package main
+package main
 
-// func main() {
+import "fmt"
 
-// }
+func main() {
+
+}
 
 package main
 

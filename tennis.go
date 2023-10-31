@@ -1,29 +1,49 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	var n, score_adr, score_pash int
+	var n int
 	fmt.Scan(&n)
 
-	for i := 0; i < n; i++ {
-		var andrey, pasha int
-		fmt.Scan(&andrey, &pasha)
+	andrew := make([]int, 0)
+	pasha := make([]int, 0)
+	wins1 := 0
+	wins2 := 0
 
-		if andrey > pasha {
-			score_adr++
-		} else if andrey < pasha {
-			score_pash++
+	for i := 0; i < n; i++ {
+		var andrews, pashas int
+		fmt.Scan(&andrews, &pashas)
+
+		if andrews > pashas {
+			wins1++
+		} else if pashas > andrews {
+			wins2++
 		}
+
+		andrew = append(andrew, andrews)
+		pasha = append(pasha, pashas)
 	}
 
-	if score_adr > score_pash {
+	if wins1 > wins2 {
 		fmt.Println("Andrey")
-	} else if score_adr < score_pash {
+	} else if wins1 < wins2 {
 		fmt.Println("Pasha")
 	} else {
-		fmt.Println("Draw")
+		sumAndrew := 0
+		sumPasha := 0
+
+		for i := 0; i < n; i++ {
+			sumAndrew += andrew[i]
+			sumPasha += pasha[i]
+		}
+
+		if sumAndrew > sumPasha {
+			fmt.Println("Andrey")
+		} else if sumPasha > sumAndrew {
+			fmt.Println("Pasha")
+		} else {
+			fmt.Println("Draw")
+		}
 	}
 }

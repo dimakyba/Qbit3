@@ -10,10 +10,9 @@ import (
 
 func main() {
 	var sum int
-	// foreach in array if in range(1, n) else - lost value
 	inputNumbers := GetInputSlice()
 	n := inputNumbers[0]
-	inputNumbers = inputNumbers[1:] // Remove the first element
+	inputNumbers = inputNumbers[1:]
 
 	for _, num := range inputNumbers {
 		sum += num
