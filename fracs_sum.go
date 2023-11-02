@@ -1,37 +1,51 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/big"
+)
 
 func main() {
-	var x float64
-	fmt.Scan(&x)
-
-	n, m := uint64(1), uint64(1)
-	nSum, mSum := 0.0, 0.0
-	const max int = 248397
-
-	for nSum < x {
-		nSum += 1.0 / float64(n)
-		n++
+	var n big.Float
+	_, err := fmt.Scan(&n)
+	if err != nil {
+		fmt.Println("Error reading input:", err)
+		return
 	}
 
-	n--
+	// First loop
+	N := new(big.Float)
+	i := big.NewFloat(1.0)
+	one := big.NewFloat(1.0)
+	for {
+		fraction := new(big.Float).Quo(one, i)
+		N = N.Add(N, fraction)
 
-	if nSum >= float64(x) {
-		n--
+		cmp := n.Cmp(N)
+		if cmp <= 0 {
+			result := new(big.Float).Sub(i, one)
+			fmt.Printf("%.0f ", result)
+			break
+		}
+
+		i.Add(i, one)
 	}
 
-	for mSum < x {
-		mSum += 1.0 / float64(m)
-		m++
+	// Reset N
+	N = new(big.Float)
+
+	// Second loop
+	i = big.NewFloat(1.0)
+	for {
+		fraction := new(big.Float).Quo(one, i)
+		N = N.Add(N, fraction)
+
+		cmp := n.Cmp(N)
+		if cmp < 0 {
+			fmt.Printf("%.0f\n", i)
+			break
+		}
+
+		i.Add(i, one)
 	}
-
-	m--
-
-	if mSum >= float64(x) {
-		m--
-	}
-
-	fmt.Printf("%f %f\n", nSum, mSum)
-	fmt.Printf("%d %d\n", n, m)
 }

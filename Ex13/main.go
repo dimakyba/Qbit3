@@ -10,6 +10,7 @@ func main() {
 
 	max = n
 	for n > 1 {
+		fmt.Printf("%d %d\n", sum, max)
 		if n%2 == 0 {
 			n /= 2
 			sum += n
