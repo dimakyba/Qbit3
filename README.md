@@ -6,7 +6,7 @@
 + ~~ex11~~
 + ~~ex16~~
 + ~~tennis (18 -> 67.5)~~ thx andrew
-+ bank
++ bank (bank3 is better that previous)
 + GNCHE-1
 + ~~masha and alarms~~ YESSSSSSSSSSSSSSSSSS
 + should i change the structure??
