@@ -5,10 +5,10 @@ import "fmt"
 func main() {
 	var n int
 	fmt.Scan(&n)
-	sum := 0
+	counter := 0
 	for n != 0 {
-		sum += n
+		counter++
 		fmt.Scan(&n)
 	}
-	fmt.Println(sum)
+	fmt.Println(counter)
 }

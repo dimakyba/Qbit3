@@ -7,7 +7,7 @@
 + ~~ex16~~
 + ~~tennis (18 -> 67.5)~~ thx andrew
 + bank (bank3 is better that previous)
-+ GNCHE-1
++ ~~GNCHE-1~~ done
 + ~~masha and alarms~~ YESSSSSSSSSSSSSSSSSS
 + should i change the structure??
 + ramka using arithmetic
