@@ -5,23 +5,22 @@ import (
 )
 
 func main() {
-	var n float64
-	fmt.Scan(&n)
+	var number float64
+	fmt.Scan(&number)
 
-	sum := 0.0
-	i := 1.0
+	i := 0
+	suma := 0.0
+	var res1, res2 int
 
-	for sum < n {
-		sum += 1 / i
+	for suma <= number+1e-6 {
 		i++
-	}
-	fmt.Printf("%.0f ", i-2)
-	sum = 0.0
-	i = 1.0
+		suma += 1.0 / float64(i)
 
-	for sum <= n {
-		sum += 1 / i
-		i++
+		if suma < number-1e-6 {
+			res1 = i
+		}
 	}
-	fmt.Printf("%.0f\n", i-1)
+
+	res2 = i
+	fmt.Println(res1, res2)
 }
